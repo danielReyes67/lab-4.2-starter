@@ -5,18 +5,51 @@ About Cats on Skis
 {% endblock %}
 
 {% block content %}
-<h3>About Cats on Skis</h3>
+<h3 class="title is-3">About Cats on Skis</h3>
 
-<p>
-We love Cats on Skis! This is the absolute best place to find information about cats on skis.
+<p class="is-size-5 mb-5">
+    We love Cats on Skis! This is the absolute best place to find information about cats on skis.
 </p>
 
-<h3>Your Authors</h3>
+<div class="notification is-info is-light">
+    <strong>Have a skiing cat?</strong> We are always looking to expand our wiki. 
+    <a href="#" class="button is-info is-small ml-3">Submit a Photo</a>
+</div>
 
-<p>
-Slalom Sammy 
-<img src="{{ url_for('images', image='slalom-sammy') }}">
-</p>
+<!-- <hr>
+
+<h3 class="title is-4">Cat Gallery</h3>
+<div class="columns is-multiline mb-6">
+    {% for img_name in gallery_images %}
+        <div class="column is-one-third">
+            <div class="box p-2"> <figure class="image is-square">
+                    <img class="gallery-img" src="{{ url_for('images', image=img_name) }}" alt="A cat on skis">
+                </figure>
+            </div>
+        </div>
+    {% else %}
+        <div class="column is-full">
+            <p class="has-text-grey">No images found in the gallery folder.</p>
+        </div>
+    {% endfor %}
+</div>
+
+<hr> -->
+
+<h3 class="title is-4">The Team</h3>
+
+<div class="columns">
+    
+    <div class="column is-half">
+        <div class="box has-text-centered h-100">
+            <p class="is-size-5 has-text-weight-bold mb-3">Slalom Sammy</p>
+            <p class="heading">Feline Expert</p>
+            <figure class="image is-128x128" style="margin: 0 auto;">
+                <img class="is-rounded sammy-image" src="{{ url_for('images', image='slalom-sammy') }}" alt="Slalom Sammy">
+            </figure>
+        </div>
+    </div>
+
+</div>
 
 {% endblock %}
-

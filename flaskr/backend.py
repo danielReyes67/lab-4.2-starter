@@ -49,6 +49,12 @@ class Backend:
         """Returns an iterator for all of the pages."""
         return self.pages.keys()
 
+    # --- ADD THIS NEW METHOD ---
+    def get_all_image_names(self):
+        """Returns an iterator for all of the image names."""
+        return self.images.keys()
+    # ---------------------------
+    
     def get_image(self, name):
         """ Returns an image if it exists.
 
